@@ -22,7 +22,13 @@ public class Main {
 	private static double y2;
 	
 	// factorial variables
-	private static int n;
+	private static double n;
+	
+	// slope variables
+	private static double X1;
+	private static double X2;
+	private static double Y1;
+	private static double Y2;
 
 	public static void main(String[] args) {
 		// initializes Scanner 'input'
@@ -41,6 +47,11 @@ public class Main {
 			System.out.println("Enter the number you want factorialed: ");
 			n = input.nextInt();
 			System.out.println(f.factorial(n));
+		}
+		// selects and runs slop feautre
+		else if(select.equals("SLP")) {
+			Slope s = new Slope();
+			System.out.println("m = " + s.slp(X1, X2, Y1, Y2));
 		}
 		
 	}
