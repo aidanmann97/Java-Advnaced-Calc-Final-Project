@@ -34,7 +34,7 @@ public class Main {
 		// initializes Scanner 'input'
 		input = new Scanner(System.in);
 		
-		selectFunc();
+		selectFunc(); 
 		
 		// selects and runs distance feature
 		if(select.equals("DIST")) {

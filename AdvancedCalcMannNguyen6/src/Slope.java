@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Slope {
-	
+
 	private static Scanner input;
 	
 	public double slp(double X1, double X2, double Y1, double Y2) {
