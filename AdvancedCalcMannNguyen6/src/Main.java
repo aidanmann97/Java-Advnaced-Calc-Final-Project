@@ -29,6 +29,10 @@ public class Main {
 	private static double X2;
 	private static double Y1;
 	private static double Y2;
+	
+	// logarithm variables
+	private static double x;
+	private static double base;
 
 	public static void main(String[] args) {
 		// initializes Scanner 'input'
@@ -41,6 +45,11 @@ public class Main {
 			Distance d = new Distance();
 			System.out.println(d.distance(x1, y1, x2, y2));
 		} 
+		// selects and runs zeros feature
+		else if(select.equals("ZER")) {
+			Zeros z = new Zeros();
+			z.zer();
+		}
 		// selects and runs factorial feature
 		else if(select.equals("FACT")) {
 			Factorial f = new Factorial();
@@ -48,10 +57,15 @@ public class Main {
 			n = input.nextInt();
 			System.out.println(f.factorial(n));
 		}
-		// selects and runs slop feautre
+		// selects and runs slop feature
 		else if(select.equals("SLP")) {
 			Slope s = new Slope();
 			System.out.println("m = " + s.slp(X1, X2, Y1, Y2));
+		} 
+		// selects and runs log feature
+		else if(select.equals("LOG")) {
+			Log l = new Log();
+			System.out.println(l.logX(x, base));
 		}
 		
 	}
@@ -61,9 +75,7 @@ public class Main {
 		System.out.println("Welcome to our Advanced Math Function Calculator!");
 		System.out.println("Enter \"DIST\" for distance between 2 points");
 		System.out.println("Enter \"ZER2\" to find the zeros of a quadratic");
-		System.out.println("Enter \"ZER3\" to find the zeros of a cubic");
 		System.out.println("Enter \"FACT\" for factorial");
-		System.out.println("Enter \"SUM");
 		System.out.println("Enter \"SLP\" to find the slope");
 		System.out.println("Enter \"LOG\" to solve a logarithm");
 		System.out.println("What feature would you like to use: ");
